@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu Du Lịch</title>
+        <!-- Thêm Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+        <!-- Thêm Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+        <!-- Thêm Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0"></script>
+    </head>
+    
+
+<body>
+
+    
+    <!-- Back to top -->
+    <button id="back-to-top" style="display: none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <img onerror="this.src='thumbs/170x85x2/assets/images/noimage.png';" src="./images/logo.png" alt="Công ty TNHH Du lịch Ngôi Sao Biên Hoà">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" title="Trang chủ"><i class="fas fa-home"></i> Trang chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Tour trong nước
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="tour-container">
+                                <div class="tour-row">
+                                    <div class="tour-column">
+                                        <img src="./images/tour-trong-nuoc.jpg" alt="Tour trong nước" class="tour-image">
+                                    </div>
+                                    <div class="tour-column">
+                                        <h5>MIỀN BẮC</h5>
+                                        <a class="dropdown-item" href="tour-xuyen-bac">TOUR XUYÊN BẮC</a>
+                                        <a class="dropdown-item" href="tour-ha-giang">TOUR HÀ GIANG</a>
+                                        <a class="dropdown-item" href="tour-sa-pa">TOUR SA PA</a>
+                                    </div>
+                                    <div class="tour-column">
+                                        <h5>MIỀN TRUNG</h5>
+                                        <a class="dropdown-item" href="tour-hue">TOUR HUẾ</a>
+                                        <a class="dropdown-item" href="tour-quang-tri">TOUR QUẢNG TRỊ</a>
+                                        <a class="dropdown-item" href="tour-quang-binh">TOUR QUẢNG BÌNH</a>
+                                    </div>
+                                    <div class="tour-column">
+                                        <h5>MIỀN NAM</h5>
+                                        <a class="dropdown-item" href="tour-can-tho">TOUR CẦN THƠ</a>
+                                        <a class="dropdown-item" href="tour-an-giang">TOUR AN GIANG</a>
+                                        <a class="dropdown-item" href="tour-ca-mau">TOUR CÀ MAU</a>
+                                        <a class="dropdown-item" href="tour-vung-tau">TOUR VŨNG TÀU</a>
+                                        <a class="dropdown-item" href="tour-dong-thap">TOUR ĐỒNG THÁP</a>
+                                        <a class="dropdown-item" href="tour-ben-tre">TOUR BẾN TRE</a>
+                                    </div>
+                                    <div class="tour-column">
+                                        <h5>TÂY NGUYÊN</h5>
+                                        <a class="dropdown-item" href="tour-gia-lai">TOUR GIA LAI</a>
+                                    </div>
+                                </div>
+                            </div>                                            
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tour ngoài nước
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="tour-chau-a">TOUR CHÂU Á</a>
+                            <a class="dropdown-item" href="tour-chau-au">TOUR CHÂU ÂU</a>
+                            <a class="dropdown-item" href="tour-chau-my">TOUR CHÂU MỸ</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ve-chuyen-bay" title="Vé máy bay">Vé máy bay</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" title="Về chúng tôi">Về chúng tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tintuc.html" title="Tin tức">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lien-he" title="Liên hệ">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+     <div style="width: 100%; padding: 0; background-color: #E9ECEF;">
+        <div class="breadCrumbs">
+            <div class="center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a class="text-decoration-none" href="index.html"><span>Trang chủ</span></a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <span>Tin tức</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+     </div>
+
+<!-- Thêm nội dung mới vào đây -->
+<div id="container" class="center w-clear">
+    <div class="title-main">
+        <h1>Tin tức</h1>
+        <p>Lập kế hoạch chuyến đi của bạn cùng chúng tôi</p>
+    </div>
+    <div class="w-clear">
+        <div class="row">
+            <div class="custom-col col-md-4 col-sm-6 my-2" style="padding-left: 0; padding-right:0 ;">
+                <div class="news-item-wrapper">
+                    <div class="news-item">
+                        <div class="news-image scale-img">
+                            <img src="./images/moi-mua-mien-bac-4731.jpg" alt="Kinh nghiệm du lịch miền Bắc mùa nào đẹp nhất và thơ mộng nhất trong năm">
+                        </div>
+                        <div class="news-desc">
+                            <p class="news-time"><img src="./images/icon-tt.png" alt="Icon tin tức"><span></span>21 Tháng Tám, 2023</p>
+                            <p class="news-name"><a href="kinh-nghiem-du-lich-mien-bac-mua-nao-dep-nhat-va-tho-mong-nhat-trong-nam">Kinh nghiệm du lịch miền Bắc mùa nào đẹp nhất và thơ mộng nhất trong năm</a></p>
+                            <p class="news-info text-split text-split-5">Mỗi mùa mỗi vùng miền đều có những vẻ đẹp rất riêng không thể hòa lẫn. Nhưng xét về khí hậu thì miền Bắc lại là vùng hầu như có đủ 4 mùa riêng biệt hơn miền Trung hay miền Nam. Cùng tham khảo bài viết dưới đây để biết được nên đi du lịch miền Bắc mùa nào đẹp nhất và cụ thể là vào tháng mấy nhé.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-col col-md-4 col-sm-6 my-2" style="padding-left: 0; padding-right:0 ;">
+                <div class="news-item-wrapper">
+                    <div class="news-item">
+                        <div class="news-image scale-img">
+                            <img src="./images/trai-nghiem-tour-nuoi-duong-tam-hon-3489.jpg" alt="Review các điểm du lịch nghỉ dưỡng miền Bắc dịp 30/4 đẹp như mơ">
+                        </div>
+                        <div class="news-desc">
+                            <p class="news-time"><img src="./images/icon-tt.png" alt="Icon tin tức"><span></span>21 Tháng Tám, 2023</p>
+                            <p class="news-name"><a href="review-cac-diem-du-lich-nghi-duong-mien-bac-dip-304-dep-nhu-mo">Review các điểm du lịch nghỉ dưỡng miền Bắc dịp 30/4 đẹp như mơ</a></p>
+                            <p class="news-info text-split text-split-5">Du lịch nghỉ dưỡng miền Bắc dịp 30/4, bạn chắc chắn không nên bỏ lỡ những điểm đến lý tưởng như thiên đường biên đảo Cô Tô, Cát Bà, di sản thiên nhiên thế giới Hạ Long, Tràng An hay một loạt các khu resort đẹp như tranh vẽ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-col col-md-4 col-sm-6 my-2" style="padding-left: 0; padding-right:0 ;">
+                <div class="news-item-wrapper">
+                    <div class="news-item">
+                        <div class="news-image scale-img">
+                            <img src="./images/kinh-nghiem-du-lich-sau-dich-2-3179.jpg" alt="Kinh nghiệm du lịch sau dịch bạn cần biết để có một chuyến đi như ý">
+                        </div>
+                        <div class="news-desc">
+                            <p class="news-time"><img src="./images/icon-tt.png" alt="Icon tin tức"><span></span>21 Tháng Tám, 2023</p>
+                            <p class="news-name"><a href="kinh-nghiem-du-lich-sau-dich-ban-can-biet-de-co-mot-chuyen-di-nhu-y">Kinh nghiệm du lịch sau dịch bạn cần biết để có một chuyến đi như ý</a></p>
+                            <p class="news-info text-split text-split-5">Đây là tất tần tật kinh nghiệm du lịch sau dịch mà bạn cần biết để có một chuyến đi an toàn, trọn vẹn nhất trên khắp Việt Nam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="pagination-home"></div>
+    </div>
+</div>
+
+    <style>
+        .box-news { width: 49%; float: left; margin-bottom: 20px; display: block; }
+        .box-news:nth-child(2n) { float: right; }
+        .box-news:nth-child(2n+1) { clear: both; }
+        .pic-news { float: left; margin-right: 15px; width: 38%; margin-bottom: 5px; }
+        .pic-news img { width: 100%; }
+        .name-news { font-family: RM; color: #333; font-size: 18px; line-height: 25px; display: block; margin-bottom: 3px; }
+        .name-news a { color: #333; }
+        .name-news a:hover { color: var(--color-medium-red); }
+        .time-news { color: var(--color-gray); font-size: 13px; margin: 0; }
+        .news-desc {
+            padding: 15px 44px 35px 30px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            text-align: justify;
+            border: none;
+        }
+        .news-name {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .desc-news { color: #777; margin: 3px 0 0; line-height: 22px; text-align: justify; }
+        .share { padding: 20px 10px 10px 15px; background: rgba(128, 128, 128, 0.15); margin-top: 15px; border-radius: 5px; }
+        .share b { display: block; margin-bottom: 5px; }
+        @media (max-width:767px){
+            .box-news{width:100%;float:none;margin:0 0 20px;}
+            .pic-news{width:35%;}
+        }
+        .news-item {
+            overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài */
+            transition: transform 0.3s; /* Hiệu ứng chuyển động khi hover */
+        }
+        .custom-col {
+            border: 1px solid #ddd; /* Tạo viền bên ngoài cho các cột */
+            border-radius: 8px; /* Bo tròn các góc */
+            overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài */
+        }
+        .news-time img {
+            margin-right: 10px;
+        }
+        .news-time {
+            font-size: 20px;
+        }
+        .news-name a {
+            color: #000;
+            text-decoration: none;
+        }
+        .news-name a:hover {
+            color: orange;
+        }
+        .news-item {
+            border: none; /* Bỏ viền bên trong */
+            border-radius: 8px; /* Bo tròn các góc */
+            overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài */
+            transition: transform 0.3s; /* Hiệu ứng chuyển động khi hover */
+        }
+        .news-item-wrapper {
+            border: none; /* Xóa viền bên ngoài cho news-item-wrapper */
+            border-radius: 8px; /* Bo tròn các góc */
+            overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài */
+        }
+        .news-image img {
+            width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng */
+            transition: transform 0.3s; /* Hiệu ứng zoom cho ảnh */
+        }
+        .news-image:hover img {
+            transform: scale(1.1); /* Zoom ảnh khi hover */
+        }
+        .news-desc {
+            text-align: justify; /* Căn đều chữ hai bên */
+        }
+        .row {
+            display: flex; /* Sử dụng flexbox để căn chỉnh các cột */
+            justify-content: space-between; /* Đảm bảo các cột đều nhau */
+        }
+        .col-md-4 {
+            flex: 1; /* Đặt các cột có chiều rộng bằng nhau */
+            margin: 0 10px; /* Thêm khoảng cách giữa các cột */
+        }
+        @media (max-width: 767px) {
+            .row {
+            display: block; /* Đặt display thành block cho điện thoại */
+            }
+    
+            .custom-col {
+                width: 100%; /* Đặt chiều rộng của cột thành 100% trên thiết bị di động */
+                margin: 0; /* Xóa khoảng cách giữa các cột */
+            }
+        }
+        body {
+            margin: 0; /* Xóa khoảng cách mặc định của body */
+            padding: 0; /* Xóa padding mặc định của body */
+        }
+        #container {
+            padding: 0; /* Xóa padding của container */
+        }
+        .footer-top {
+            padding: 0; /* Xóa padding của footer-top */
+        }
+    </style>
+
+    <!-- Footer -->
+    <div id="footer" style="background-image: url('./images/bg-footer.jpg'); background-size: cover;">
+        <div class="footer-top py-4">
+            <div class="container d-flex flex-wrap align-items-start justify-content-between">
+                <div class="footer-1 col-md-3">
+                    <h5 class="footer-tit2">Biên Hoà Star Travel</h5>
+                    <div class="footer-content">
+                        <p>Địa chỉ: Số 112, KDC Võ Thị Sáu, KP7, Phường Thống Nhất, Tp.Biên Hoà, T.Đồng Nai</p>
+                        <p>Hotline: 0939.390.707</p>
+                        <p>Email: bienhoastar.travel@gmail.com</p>
+                        <p>Website: <a href="http://bienhoastartravel.com" class="text-decoration-none">bienhoastartravel.com</a></p>
+                    </div>
+                </div>
+
+                <div class="footer-2 col-md-3">
+                    <h5 class="footer-tit">Dịch vụ</h5>
+                    <ul class="footer-list list-unstyled">
+                        <li><a class="text-decoration-none" href="tour-ngan-ngay" title="Tour ngắn ngày">Tour ngắn ngày</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-3 col-md-3">
+                    <h5 class="footer-tit">Góc khách hàng</h5>
+                    <ul class="footer-list list-unstyled">
+                        <li><a class="text-decoration-none" href="ho-tro-dat-hang" title="Hỗ trợ đặt hàng">Hỗ trợ đặt hàng</a></li>
+                        <li><a class="text-decoration-none" href="chinh-sach-tra-hang" title="Chính sách trả hàng">Chính sách trả hàng</a></li>
+                        <li><a class="text-decoration-none" href="chinh-sach-bao-hanh" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-4">
+                    <p class="footer-tit">FANPAGE FACEBOOK</p>
+                    <div id="fanpage-facebook">
+                        <div class="fb-page" 
+                            data-href="https://www.facebook.com/bienhoastartravel"
+                            data-tabs="timeline" 
+                            data-width="600" 
+                            data-height="200" 
+                            data-small-header="true" 
+                            data-adapt-container-width="true" 
+                            data-hide-cover="false" 
+                            data-show-facepile="true">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="footer-bottom py-2">
+            <div class="container text-center">
+    <p class="copyright m-0">Copyright &copy; 2024. Design by <a href="https://vinasoftware.com.vn/" class="text-decoration-none">Student DNTU</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="./js/script.js"></script>
+
+    <!-- Thêm Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Thêm Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>

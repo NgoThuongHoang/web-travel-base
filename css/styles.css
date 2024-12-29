@@ -1,0 +1,616 @@
+body {
+    font-family: 'Josefin Sans', sans-serif; /* Áp dụng phông chữ cho toàn bộ trang */
+}
+
+ /* ================ Back to top ================ */
+ #back-to-top {
+    position: fixed;
+    bottom: 100px; /* Khoảng cách từ dưới */
+    right: 50px; /* Khoảng cách từ bên phải */
+    background-color: transparent; /* Nền trong suốt */
+    color: orange; /* Màu mũi tên */
+    border: 2px solid orange; /* Viền trắng */
+    border-radius: 50%; /* Hình tròn */
+    width: 50px; /* Chiều rộng của nút */
+    height: 50px; /* Chiều cao của nút */
+    display: flex; /* Căn giữa biểu tượng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: none; /* Bỏ hiệu ứng bóng nếu không cần thiết */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+/* Hiệu ứng hover */
+#back-to-top:hover {
+    background-color: rgba(255, 165, 0, 0.1); /* Màu nền nhạt khi di chuột */
+}
+
+/* Hiệu ứng khi nhấn nút */
+#back-to-top:focus {
+    outline: none; /* Loại bỏ viền khi nhấn */
+}
+
+/* Hiệu ứng khi nút hiển thị ở dưới cùng của trang */
+#back-to-top.show {
+    display: flex; /* Hiển thị nút */
+}
+
+
+
+h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: "bold";
+    font-size: 36px !important;
+}
+.navbar{
+    position: sticky;
+    top: 0; /* Dính vào đầu trang */
+    z-index: 1000; /* Đảm bảo menu luôn nằm trên cùng */
+}
+.bg-light{
+    background-color: #ffffff !important; /* Màu nền của navbar */
+}
+.navbar-nav .nav-link {
+    color: black !important; /* Màu chữ mặc định là đen */
+}
+.navbar-nav .nav-link:hover {
+    color: orange !important; /* Màu chữ khi hover là cam */
+}
+.navbar-nav .dropdown-menu {
+    background-color: #f8f9fa; /* Màu nền cho menu dropdown */
+}
+.logo img {
+    max-width: 150px; /* Kích thước logo */
+    height: auto;
+}
+.nav-item {
+    margin-right: 20px; /* Cách giữa các mục trong navbar */
+}
+.nav-item:last-child {
+    margin-right: 0; /* Không áp dụng margin cho mục cuối cùng */
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block; /* Hiện dropdown khi hover */
+}
+
+.tour-container {
+    /* border: 1px solid #ccc; */
+    padding: 15px; /* Khoảng cách bên trong khung */
+    max-width: 1000px; /* Độ rộng tối đa của khung */
+    margin: 20px auto; /* Căn giữa khung */
+    background-color: #f9f9f9; /* Màu nền */
+}
+.tour-row {
+    display: flex; /* Sử dụng flexbox để căn chỉnh cột */
+    justify-content: space-between; /* Khoảng cách đều giữa các cột */
+}
+.tour-column {
+    flex: 1; /* Mỗi cột chiếm không gian đều nhau */
+    padding: 10px 25px 0 20px; /* Khoảng cách bên trong cột */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+    min-width: 150px; /* Đặt chiều rộng tối thiểu để tránh xuống dòng */
+}
+.tour-image {
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá chiều rộng cột */
+    height: auto; /* Đảm bảo tỷ lệ khung hình */
+}
+.dropdown-item {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: #000000; /* Màu chữ */
+    display: block; /* Đảm bảo mỗi mục là một khối */
+    margin-bottom: 5px; /* Khoảng cách giữa các mục */
+    padding: 5px 0 5px 0; /* Top: 0px, Right: 5px, Bottom: 5px, Left: 5px */
+    background-color: transparent; /* Đặt nền trong suốt */
+}
+.dropdown-item:hover {
+    color: orange; /* Màu chữ khi di chuột */
+}
+.dropdown-menu {
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translateX(-30%); /* Đẩy menu về bên trái một nửa chiều rộng của nó */
+    border: none;
+    display: none; /* Ẩn dropdown ban đầu */
+}
+.dropdown-menu.show {
+    display: block; /* Hiện dropdown khi có lớp show */
+}
+
+/* Tùy chỉnh cho slideshow */
+.slideshow {
+    max-width: 100%; /* Đảm bảo slideshow không vượt quá chiều rộng của trang */
+    margin: 20px auto; /* Căn giữa slideshow */
+}
+.swiper-slide img {
+    display: block; /* Đảm bảo ảnh không có khoảng trắng */
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng */
+    height:
+     auto; /* Đảm bảo tỷ lệ khung hình */
+}
+
+/* Thay đổi màu sắc cho các nút điều hướng */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white; /* Màu trắng cho mũi tên */
+}
+/* Thay đổi màu sắc cho pagination */
+.swiper-pagination-bullet {
+    background: white; /* Màu trắng cho các chấm */
+}
+.swiper-pagination-bullet-active {
+    background: white; /* Màu trắng cho chấm đang hoạt động */
+}
+
+ /* ================ Intro ================ */
+#intro {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.center {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro-title p {
+    font-size: 18px;
+    color: #666;
+}
+
+.intro-title h2 {
+    font-size: 24px;
+    color: #ff780d;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 40px;
+    margin-top: 10px;
+}
+
+.intro-name{
+    color: #ff780d;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.intro-right {
+    flex: 2;
+}
+
+.intro-info {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify; /* Căn đều nội dung */
+
+}
+
+/* ================ Couter ================ */
+.counter-container {
+    text-align: center;
+    margin: 50px 0;
+    padding: 10px; /* Khoảng cách giữa nội dung và viền */
+    border: 2px solid #ffffff; /* Viền màu cam */
+    border-radius: 5px; /* Bo góc cho viền */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ */
+    background-color: white; /* Nền trắng để nổi bật */
+}
+
+.counter-title {
+    font-size: 24px;
+    color: #ff7f00; /* Màu cam */
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+
+.counter-wrapper {
+    display: flex; /* Sử dụng flex để căn chỉnh các phần tử */
+    justify-content: center; /* Căn giữa */
+    gap: 100px; /* Khoảng cách giữa các phần tử */
+}
+
+.counter {
+    font-size: 80px;
+    font-weight: bold;
+    transition: all 0.5s ease; /* Hiệu ứng chuyển tiếp */
+}
+
+.customers {
+    color: #007bff; /* Màu xanh cho khách hàng */
+}
+
+.trips {
+    color: #28a745; /* Màu xanh lá cho chuyến đi */
+}
+
+.locations {
+    color: #dc3545; /* Màu đỏ cho địa điểm */
+}
+
+.counter-text {
+    font-size: 40px; /* Kích thước chữ cho tiêu đề */
+    margin-bottom: 5px; /* Khoảng cách giữa tiêu đề và số */
+}
+
+.count-wrapper {
+    display: flex; /* Sử dụng flex để căn chỉnh số và biểu tượng */
+    align-items: center; /* Căn giữa dọc */
+}
+
+.count {
+    display: inline-block; /* Để có thể tăng dần */
+    margin-right: 10px; /* Khoảng cách giữa số và biểu tượng */
+}
+
+.counter i {
+    font-size: 0.8em; /* Kích thước biểu tượng */
+    color: inherit; /* Đảm bảo màu biểu tượng theo màu của phần tử cha */
+}
+
+/* ================ Country ================ */
+#country{
+    background-color: #f9f9f9;
+    padding-bottom: 30px;
+}
+
+.country-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Căn giữa các mục */
+}
+
+.country-items {
+    width: calc(33.33% - 20px); /* Ba cột */
+    margin: 10px; /* Khoảng cách giữa các mục */
+    position: relative; /* Để có thể căn giữa chữ */
+    overflow: hidden; /* Giúp ảnh không bị tràn khi phóng to */
+}
+
+.country-items img {
+    width: 100%; /* Đảm bảo ảnh chiếm 100% chiều rộng */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    transition: transform 0.5s ease; /* Thêm hiệu ứng khi phóng to */
+}
+
+.country-items:hover img {
+    transform: scale(1.1); /* Phóng to ảnh khi hover */
+}
+
+.country-items span {
+    position: absolute;
+    left: 0; /* Căn trái */
+    top: 0; /* Căn trên */
+    width: 100%; /* Chiều rộng 100% */
+    height: 100%; /* Chiều cao 100% */
+    display: flex; /* Để sử dụng flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    font-size: 18px; /* Kích thước chữ */
+    color: #fff; /* Màu chữ trắng */
+    font-weight: 700; /* Đậm */
+    text-transform: uppercase; /* Chữ in hoa */
+    background-color: rgba(0, 0, 0, 0.3); /* Nền đen mờ */
+    transition: background-color 0.3s ease; /* Hiệu ứng thay đổi màu nền khi hover */
+}
+
+.country-items:hover span {
+    background-color: rgba(0, 0, 0, 0.5); /* Đổi màu nền đen khi hover */
+}
+
+.image-container {
+    position: relative; /* Để có thể căn giữa chữ */
+}
+
+.title-main {
+    margin-bottom: 36px;
+    text-align: center;
+    position: relative;
+    background-image: url(../images/icon-title.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 62px; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-main h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ff780d; /* Màu cam cho chữ */
+}
+
+/* Đảm bảo rằng phần ảnh được thu nhỏ lại cho các thiết bị di động */
+@media (max-width: 768px) {
+    .country-items {
+        width: calc(50% - 20px); /* Hai cột trên thiết bị nhỏ hơn */
+    }
+}
+
+@media (max-width: 480px) {
+    .country-items {
+        width: calc(100% - 20px); /* Một cột trên thiết bị rất nhỏ */
+    }
+}
+
+/* ================ Country ================ */
+
+#newsletter {
+    background-color: #f9f9f9; /* Màu nền nhẹ nhàng */
+    padding: 50px 0; /* Khoảng cách trên dưới */
+}
+
+.newsletter-left {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.newsletter-left h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff780d;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.newsletter-left h2 span {
+    color: #ff780d;
+    font-size: 40px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+}
+
+.newsletter-left p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.form-newsletter .row-newsletter2 {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các trường */
+}
+
+.form-newsletter .row-newsletter3 {
+    display: flex; /* Đảm bảo sử dụng flex để sắp xếp các trường trên cùng một hàng */
+    gap: 20px; /* Khoảng cách giữa các trường */
+}
+
+
+.input-newsletter {
+    margin-bottom: 15px;
+    flex: 1; /* Căn đều các trường input */
+}
+
+.input-newsletter label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-newsletter input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-newsletter input:focus {
+    border-color: #ff780d;
+    outline: none;
+}
+
+.btn-newsletter {
+    background-color: #ff780d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-newsletter:hover {
+    background-color: #e66f0c;
+}
+
+.newsletter-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-right img {
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.invalid-feedback {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .newsletter-left, .newsletter-right {
+        flex: 100%;
+        padding: 0;
+    }
+
+    .row-newsletter2, .row-newsletter3 {
+        flex-direction: column;
+    }
+}
+
+/* ================ Tour ================ */
+.product-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Chỉnh sửa viền cho các ô */
+.product-item {
+    width: calc(25% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Thêm viền ô */
+    border-radius: 5px; /* Bo tròn các góc */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển động mượt mà */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bóng đổ cho hiệu ứng chiều sâu */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Nâng lên một chút khi hover */
+}
+
+/* Chỉnh màu và kích thước tiêu đề */
+.title-main h2 {
+    color: #000; /* Chuyển sang màu đen */
+    font-size: 1.5rem; /* Giảm kích thước chữ */
+}
+
+.title-main p {
+    color: #000; /* Chuyển sang màu đen */
+}
+
+.product-desc{
+    padding-left: 10px;
+}
+/* Chỉnh màu chữ của product-item */
+.product-desc h3 a,
+.product-desc p {
+    color: #000 !important; /* Đảm bảo chữ bên trong là màu đen */
+}
+
+.product-item-name p{
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff780d;
+}
+/* Đảm bảo hình ảnh không bị thay đổi */
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    display: flex; /* Đặt flexbox để căn giữa các phần tử con */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 8px; /* Tạo khoảng cách giữa icon và chữ */
+    margin-bottom: 10px; /* Thêm khoảng cách bên dưới để đỡ dính */
+}
+
+.product-info2 {
+    display: flex; /* Đặt flexbox để căn các phần tử trên cùng một hàng */
+    justify-content: space-between; /* Tạo khoảng cách giữa thời gian và "Liên hệ" */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+/* Đảm bảo các phần tử bên trong không bị thay đổi kích thước */
+.product-info2 p.product-info {
+    margin: 0; /* Loại bỏ khoảng cách mặc định nếu có */
+    display: flex; /* Để căn chỉnh icon và text cùng hàng */
+    align-items: center; /* Căn giữa icon và text theo chiều dọc */
+    gap: 8px; /* Khoảng cách giữa icon và text */
+}
+
+.product-info2 .price-new {
+    color: #000; /* Đổi màu nếu cần */
+}
+
+.product-item-name {
+    padding-top: 10px; /* Thêm khoảng cách phía trên */
+}
+
+.product-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff780d;
+}
+
+/* Thêm hiệu ứng zoom cho hình ảnh */
+.product-image {
+    overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài khi zoom */
+}
+
+.zoom-image {
+    transition: transform 0.3s ease-in-out; /* Hiệu ứng zoom mượt */
+}
+
+.zoom-image:hover {
+    transform: scale(1.1); /* Phóng to ảnh lên 10% khi hover */
+}
+
+/* ================ Footer ================ */
+#footer {
+    color: white;
+}
+
+#footer a {
+    color: white;  /* Màu chữ của các link trong footer là màu trắng */
+    text-decoration: none;  /* Bỏ gạch chân link */
+}
+
+#footer a:hover {
+    color: #dddddd;  /* Màu chữ của link khi hover là màu cam */
+}
+
+.footer-top {
+    padding: 20px 0;
+}
+
+.footer-tit2, .footer-tit {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    background-color: rgb(112 64 64 / 70%);
+    padding: 10px 0;
+}
+
+.footer-bottom a {
+    color: #ffcc00;
+}
+

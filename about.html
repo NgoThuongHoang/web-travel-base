@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu Du Lịch</title>
+        <!-- Thêm Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+        <!-- Thêm Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+        <!-- Thêm Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0"></script>
+    </head>
+    
+
+<body>
+
+    
+    <!-- Back to top -->
+    <button id="back-to-top" style="display: none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <img onerror="this.src='thumbs/170x85x2/assets/images/noimage.png';" src="./images/logo.png" alt="Công ty TNHH Du lịch Ngôi Sao Biên Hoà">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" title="Trang chủ"><i class="fas fa-home"></i> Trang chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Tour trong nước
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="tour-container">
+                                <div class="tour-row">
+                                    <div class="tour-column">
+                                        <img src="./images/tour-trong-nuoc.jpg" alt="Tour trong nước" class="tour-image">
+                                    </div>
+                                    <div class="tour-column">
+                                        <h5>MIỀN BẮC</h5>
+                                        <a class="dropdown-item" href="tour-xuyen-bac">TOUR XUYÊN BẮC</a>
+                                        <a class="dropdown-item" href="tour-ha-giang">TOUR HÀ GIANG</a>
+                                        <a class="dropdown-item" href="tour-sa-pa">TOUR SA PA</a>
+                                    </div>
+                                    <div class="tour-column">
+                                        <h5>MIỀN TRUNG</h5>
+                                        <a class="dropdown-item" href="tour-hue">TOUR HUẾ</a>
+                                        <a class="dropdown-item" href="tour-quang-tri">TOUR QUẢNG TRỊ</a>
+                                        <a class="dropdown-item" href="tour-quang-binh">TOUR QUẢNG BÌNH</a>
+                                    </div>
+                                    <div class="tour-column">
+                                        <h5>MIỀN NAM</h5>
+                                        <a class="dropdown-item" href="tour-can-tho">TOUR CẦN THƠ</a>
+                                        <a class="dropdown-item" href="tour-an-giang">TOUR AN GIANG</a>
+                                        <a class="dropdown-item" href="tour-ca-mau">TOUR CÀ MAU</a>
+                                        <a class="dropdown-item" href="tour-vung-tau">TOUR VŨNG TÀU</a>
+                                        <a class="dropdown-item" href="tour-dong-thap">TOUR ĐỒNG THÁP</a>
+                                        <a class="dropdown-item" href="tour-ben-tre">TOUR BẾN TRE</a>
+                                    </div>
+                                    <div class="tour-column">
+                                        <h5>TÂY NGUYÊN</h5>
+                                        <a class="dropdown-item" href="tour-gia-lai">TOUR GIA LAI</a>
+                                    </div>
+                                </div>
+                            </div>                                            
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tour ngoài nước
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="tour-chau-a">TOUR CHÂU Á</a>
+                            <a class="dropdown-item" href="tour-chau-au">TOUR CHÂU ÂU</a>
+                            <a class="dropdown-item" href="tour-chau-my">TOUR CHÂU MỸ</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ve-chuyen-bay" title="Vé máy bay">Vé máy bay</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" title="Về chúng tôi">Về chúng tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tintuc.html" title="Tin tức">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lien-he" title="Liên hệ">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+     <div style="width: 100%; padding: 0; background-color: #E9ECEF;">
+        <div class="breadCrumbs">
+            <div class="center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a class="text-decoration-none" href="index.html"><span>Trang chủ</span></a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <span>Về chúng tôi</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+     </div>
+
+    <!-- Intro -->
+    <div id="intro" class="container mt-4">
+        <div class="text-center">
+            <h2>Giới thiệu về Công ty TNHH Du lịch Ngôi Sao Biên Hoà</h2>
+            <p>Chúng tôi là một doanh nghiệp hoạt động trong lĩnh vực du lịch với nhiều năm kinh nghiệm.</p>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="images/v-2376.png" class="img-fluid" alt="Biên Hòa Star Travel">
+            </div>
+            <div class="col-md-6">
+                <h3>Về Chúng Tôi</h3>
+                <p>Biên Hoà Star Travel cung cấp các dịch vụ du lịch chất lượng cao, bao gồm tour trong nước và quốc tế, đặt vé máy bay, và các dịch vụ liên quan đến du lịch khác.</p>
+                <p>Chúng tôi cam kết mang đến cho khách hàng những trải nghiệm tuyệt vời nhất với giá cả hợp lý.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Couter -->
+    <div class="counter-container mt-4">
+        <h2 class="counter-title text-center">Suốt chặng đường sự nghiệp,<br> hiện tại chúng tôi đạt được những thành tựu sau:</h2>
+        <div class="counter-wrapper d-flex justify-content-around">
+            <div class="counter customers text-center">
+                <div class="counter-text">Khách hàng</div>
+                <div class="count-wrapper">
+                    +<span id="customers" class="count">0</span> 
+                    <i class="fa-solid fa-person"></i>               
+                </div>
+            </div>
+            <div class="counter trips text-center">
+                <div class="counter-text">Chuyến đi</div>
+                <div class="count-wrapper">
+                    +<span id="trips" class="count">0</span> 
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+            </div>
+            <div class="counter locations text-center">
+                <div class="counter-text">Địa điểm</div>
+                <div class="count-wrapper">
+                    +<span id="locations" class="count">0</span> 
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="company-info" class="container mt-4">
+        <h2>CÔNG DU LỊCH BIÊN HOÀ STAR TRAVEL</h2>
+        <p>Biên Hoà Star Travel là một doanh nghiệp hoạt động trong những vực du lịch có uy tín với những sản phẩm chủ lực như Voucher nghỉ dưỡng của FLC, Vinpearl, Flamingo.... Ngoài ra chúng tôi còn có nhiều thế mạnh về du lịch trong và ngoài nước, đặt vé máy bay giá rẻ, hội thảo và sự kiện, hoạt động team building, cho thuê xe du lịch... Trải qua nhiều năm hoạt động Biên Hoà Star Travel tự tin đem đến trải nghiệm tuyệt vời nhất cho khách hàng.</p>
+        
+        <h3>ĐỊNH VỊ THƯƠNG HIỆU</h3>
+        <ul>
+            <li>Biên Hoà Star Travel trên thị trường là công ty du lịch chuẩn 5 sao chất lượng cao, chuyên nghiệp, thân thiện với khách hàng.</li>
+            <li>Chuyên nghiệp trong việc tổ chức team building kết hợp du lịch.</li>
+            <li>Tổ chức du lịch nghỉ dưỡng đạt chuẩn quốc tế.</li>
+            <li>Tổ chức các tour du lịch trong và ngoài nước với lịch trình đa dạng và phong phú.</li>
+        </ul>
+
+        <h3>MỤC TIÊU</h3>
+        <ul>
+            <li>Trở thành công ty du lịch uy tín và chất lượng nhất.</li>
+            <li>Đem đến sự hài lòng tuyệt đối cho khách hàng.</li>
+            <li>Hướng đến những dịch vụ cao cấp với giá thành ưu đãi nhất.</li>
+            <li>Luôn là sự lựa chọn hàng đầu cho mọi đối tượng khách hàng.</li>
+        </ul>
+
+        <h3>GIÁ TRỊ CỐT LÕI</h3>
+        <ul>
+            <li>Tuân thủ các quy chuẩn về dịch vụ được đề ra.</li>
+            <li>Cam kết chất lượng tốt nhất đến với khách hàng.</li>
+            <li>Sự hài lòng của khách hàng là tiêu chí hàng đầu đối với chúng tôi.</li>
+            <li>Luôn luôn lắng nghe và hoàn thiện để đáp ứng nhu cầu khách hàng.</li>
+        </ul>
+
+        <h3>CÁC SẢN PHẨM THẾ MẠNH</h3>
+        <ul>
+            <li><strong>Voucher FLC:</strong> Quần thể nghỉ dưỡng 5 sao FLC Sầm Sơn, FLC Quy Nhơn, FLC Hạ Long với các Resort, Khách sạn, Biệt thự, Spa, Sân golf, Bar, Bể bơi…đáp ứng đầy đủ tiêu chuẩn quốc tế.</li>
+            <li><strong>Voucher Vinpearl:</strong> Cùng Biên Hoà Star Travel tận hưởng kì nghỉ 5 sao tại các khách sạn và biệt thự nghỉ dưỡng được xây dựng trên những bờ biển tuyệt đẹp tại các thành phố du lịch nổi tiếng của Việt Nam như Đà Nẵng, Nha Trang, Phú Quốc...</li>
+            <li><strong>Voucher Flamingo:</strong> Với Flamingo, khi đặt Voucher tại Biên Hoà Star Travel, Quý khách sẽ được trải nghiệm không gian du lịch sinh thái, gần gũi thiên nhiên với những căn biệt thự, resort sang trọng nằm giữa phong cảnh yên bình tách biệt hoàn toàn với thành phố.</li>
+            <li><strong>Combo du lịch:</strong> Biên Hoà Star Travel tổ chức các gói Combo du lịch bao gồm Vé máy bay khứ hồi, Phòng khách sạn và các bữa ăn kèm theo chương trình. Quý khách có thể tự do lựa chọn các bữa ăn mình mong muốn và tự lên chương trình du lịch trải nghiệm một cách linh hoạt.</li>
+            <li><strong>Tour du lịch trong nước:</strong> Với những điểm đến hấp dẫn nhất Việt Nam được chúng tôi chọn lọc và lên lịch trình kĩ càng. Mỗi nơi bạn trải qua sẽ là một trải nghiệm thú vị về cuộc sống, thiên nhiên đất nước con người ba miền Bắc Trung Nam.</li>
+            <li><strong>Tour du lịch nước ngoài:</strong> Với các Tour du lịch nước ngoài phong phú, Biên Hoà Star Travel luôn hướng khách du lịch tới những vùng đất tươi đẹp trải nghiệm không gian văn hóa đa sắc màu cùng ẩm thực phong phú. Đây là một trong những lĩnh vực mà chúng tôi sẽ phát triển mạnh mẽ trong tương lai.</li>
+            <li><strong>Tổ chức sự kiện:</strong> Với các doanh nghiệp cần quảng bá thương hiệu, sản phẩm đến các khách hàng của mình, Biên Hoà Star Travel thông qua các hoạt động như giới thiệu sản phẩm, hội nghị khách hàng, lễ ra mắt, khởi công, các loại hình triển lãm…nhằm thu hút khách hàng và tạo điều kiện giao lưu, liên kết các khách hàng đến với doanh nghiệp.</li>
+        </ul>
+
+        <h3>Kính thưa quý khách hàng</h3>
+        <p>Biên Hoà Star Travel luôn mong muốn có cơ hội hợp tác và cung cấp dịch vụ chuyên nghiệp, uy tín đến quý khách. Với các tiêu chí Tận tụy – Tận tâm – Tận tình chúng tôi cam kết sẽ mang lại chất lượng dịch vụ tốt nhất, ưu đãi nhất.</p>
+        <p>Cảm ơn quý khách hàng đã quan tâm đến hồ sơ năng lực của công ty. Biên Hoà Star Travel hy vọng sẽ nhận được niềm tin và sự lựa chọn của quý khách trong thời gian tới.</p>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" style="background-image: url('./images/bg-footer.jpg'); background-size: cover;">
+        <div class="footer-top py-4">
+            <div class="container d-flex flex-wrap align-items-start justify-content-between">
+                <div class="footer-1 col-md-3">
+                    <h5 class="footer-tit2">Biên Hoà Star Travel</h5>
+                    <div class="footer-content">
+                        <p>Địa chỉ: Số 112, KDC Võ Thị Sáu, KP7, Phường Thống Nhất, Tp.Biên Hoà, T.Đồng Nai</p>
+                        <p>Hotline: 0939.390.707</p>
+                        <p>Email: bienhoastar.travel@gmail.com</p>
+                        <p>Website: <a href="http://bienhoastartravel.com" class="text-decoration-none">bienhoastartravel.com</a></p>
+                    </div>
+                </div>
+
+                <div class="footer-2 col-md-3">
+                    <h5 class="footer-tit">Dịch vụ</h5>
+                    <ul class="footer-list list-unstyled">
+                        <li><a class="text-decoration-none" href="tour-ngan-ngay" title="Tour ngắn ngày">Tour ngắn ngày</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-3 col-md-3">
+                    <h5 class="footer-tit">Góc khách hàng</h5>
+                    <ul class="footer-list list-unstyled">
+                        <li><a class="text-decoration-none" href="ho-tro-dat-hang" title="Hỗ trợ đặt hàng">Hỗ trợ đặt hàng</a></li>
+                        <li><a class="text-decoration-none" href="chinh-sach-tra-hang" title="Chính sách trả hàng">Chính sách trả hàng</a></li>
+                        <li><a class="text-decoration-none" href="chinh-sach-bao-hanh" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-4">
+                    <p class="footer-tit">FANPAGE FACEBOOK</p>
+                    <div id="fanpage-facebook">
+                        <div class="fb-page" 
+                            data-href="https://www.facebook.com/bienhoastartravel"
+                            data-tabs="timeline" 
+                            data-width="600" 
+                            data-height="200" 
+                            data-small-header="true" 
+                            data-adapt-container-width="true" 
+                            data-hide-cover="false" 
+                            data-show-facepile="true">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="footer-bottom py-2">
+            <div class="container text-center">
+    <p class="copyright m-0">Copyright &copy; 2024. Design by <a href="https://vinasoftware.com.vn/" class="text-decoration-none">Student DNTU</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="./js/script.js"></script>
+
+    <!-- Thêm Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Thêm Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>
